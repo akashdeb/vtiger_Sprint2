@@ -8,7 +8,7 @@ public class DemoLeadTest {
 	public void demoTest() {
 
 		System.out.println("The changes by TE 4");
-		System.out.println("The changes by TE 3.2");
+		System.out.println("The changes by TE 3.7");
 
 		System.out.println("The changes by TE 2");
 
