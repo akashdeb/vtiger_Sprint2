@@ -6,7 +6,7 @@ public class DemoLeadTest {
 	
 	@Test
 	public void demoTest() {
-		System.out.println("The changes by TE 1");
+		System.out.println("The changes by TE 6");
 		System.out.println("The changes by TE Demo Changes");
 
 	}
