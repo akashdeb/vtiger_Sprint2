@@ -2,9 +2,11 @@ package com.qsp.vtiger.leads;
 
 import org.testng.annotations.Test;
 
-public class DemoLeadTest {
+import com.qsp.vtiger.genericUtility.BaseClass;
+
+public class DemoLeadTest extends BaseClass {
 	
-	@Test
+	@Test(groups = "smoke")
 	public void demoTest() {
 
 		System.out.println("The changes by TE 4");

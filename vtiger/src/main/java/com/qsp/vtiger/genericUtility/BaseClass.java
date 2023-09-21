@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.qsp.vtiger.pomRepository.HomePage;
 import com.qsp.vtiger.pomRepository.LoginPage;
@@ -33,7 +34,7 @@ public class BaseClass {
 	public static WebDriver sDriver;
 	public Connection connection;
 
-	@BeforeSuite
+	@BeforeSuite(groups = {"smoke", "regression"})
 	public void bsConfig() throws SQLException {
 		// 1. Creating an object of Driver of MY SQL vendor
 		Driver dataBaseDriver = new Driver();
@@ -44,15 +45,17 @@ public class BaseClass {
 		System.out.println("Data Base Connection has been exstablish");
 	}
 
-	@BeforeTest
+	@BeforeTest(groups = {"smoke", "regression"})
 	public void btConfig() {
 		System.out.println("Parallel Execution has been started");
 	}
-
-	@BeforeClass
-	public void bcConfig() throws IOException {
-
-		String browser = fUtils.fetchDataFromPropertyFile("browser");
+	
+	@Parameters("browser")
+	@BeforeClass(groups = {"smoke", "regression"})
+	public void bcConfig(String browser) throws IOException {
+		
+		System.out.println("The parameter value ==================== "+browser);
+		//String browser = fUtils.fetchDataFromPropertyFile("browser");
 		String url = fUtils.fetchDataFromPropertyFile("url");
 
 		if (browser.equals("chrome")) {
@@ -76,7 +79,7 @@ public class BaseClass {
 
 	}
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke", "regression"})
 	public void bmConfig() throws IOException {
 
 		String username = fUtils.fetchDataFromPropertyFile("username");
@@ -89,24 +92,24 @@ public class BaseClass {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = {"smoke", "regression"})
 	public void amConfig() {
 		HomePage home = new HomePage(driver);
 		home.logoutAction();
 
 	}
 
-	@AfterClass
+	@AfterClass(groups = {"smoke", "regression"})
 	public void acConfig() {
 		driver.quit();
 	}
 
-	@AfterTest
+	@AfterTest(groups = {"smoke", "regression"})
 	public void atConfig() {
 		System.out.println("Close the Parallel Execution");
 	}
 
-	@AfterSuite
+	@AfterSuite(groups = {"smoke", "regression"})
 	public void asConfig() throws SQLException {
 		connection.close();
 

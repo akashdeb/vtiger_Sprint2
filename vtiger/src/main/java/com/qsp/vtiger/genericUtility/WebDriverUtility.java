@@ -259,7 +259,7 @@ public class WebDriverUtility {
 	public static String takeScreenShot(WebDriver driver, String screenShotName) throws Throwable {
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File src = takeScreenShot.getScreenshotAs(OutputType.FILE);
-		File dst = new File("./screenShot/" + screenShotName + ".png");
+		File dst = new File("./screenshots/" + screenShotName + ".png");
 		Files.copy(src, dst);
 		return screenShotName;
 	}

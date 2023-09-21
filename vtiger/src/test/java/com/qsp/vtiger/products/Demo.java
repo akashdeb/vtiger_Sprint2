@@ -1,18 +1,18 @@
 package com.qsp.vtiger.products;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.testng.annotations.Test;
 
 import com.qsp.vtiger.genericUtility.ExcelUtility;
 import com.qsp.vtiger.genericUtility.IPathConstant;
 
 public class Demo {
 
-	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+	@Test(groups = "regression")
+	public void demo() throws EncryptedDocumentException, IOException {
 
 		
 		   Date date = new ExcelUtility().fetchDateDataFromExcel(IPathConstant.PRODUCT_SHEET_NAME, 22, 2);
