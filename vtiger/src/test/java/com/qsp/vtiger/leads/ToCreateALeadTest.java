@@ -54,9 +54,9 @@ public class ToCreateALeadTest extends BaseClass {
 		Assert.assertTrue(actualLeadInfo.contains(leadLastName));
 		System.out.println("Pass: the Lead has been generated");
 		
-		String dataFromDataBase = dbUtils.fetchDataFromDataBase(connection, "select * from lead;", 1);
+		//String dataFromDataBase = dbUtils.fetchDataFromDataBase(connection, "select * from lead;", 1);
 		
-		System.out.println(dataFromDataBase);
+		//System.out.println(dataFromDataBase);
 	}
 
 }
