@@ -34,16 +34,16 @@ public class BaseClass {
 	public static WebDriver sDriver;
 	public Connection connection;
 
-	@BeforeSuite(groups = {"smoke", "regression"})
-	public void bsConfig() throws SQLException {
-		// 1. Creating an object of Driver of MY SQL vendor
-		Driver dataBaseDriver = new Driver();
-		// 2. Registering driver to JDBC API
-		DriverManager.registerDriver(dataBaseDriver);
-		// 3. Establishing connection with the data base
-		connection = DriverManager.getConnection(IPathConstant.DATABASE_URL, IPathConstant.DATABASE_USERNAME, IPathConstant.DATABASE_PASSWORD);
-		System.out.println("Data Base Connection has been exstablish");
-	}
+//	@BeforeSuite(groups = {"smoke", "regression"})
+//	public void bsConfig() throws SQLException {
+//		// 1. Creating an object of Driver of MY SQL vendor
+//		Driver dataBaseDriver = new Driver();
+//		// 2. Registering driver to JDBC API
+//		DriverManager.registerDriver(dataBaseDriver);
+//		// 3. Establishing connection with the data base
+//		connection = DriverManager.getConnection(IPathConstant.DATABASE_URL, IPathConstant.DATABASE_USERNAME, IPathConstant.DATABASE_PASSWORD);
+//		System.out.println("Data Base Connection has been exstablish");
+//	}
 
 	@BeforeTest(groups = {"smoke", "regression"})
 	public void btConfig() {
@@ -109,10 +109,10 @@ public class BaseClass {
 		System.out.println("Close the Parallel Execution");
 	}
 
-	@AfterSuite(groups = {"smoke", "regression"})
-	public void asConfig() throws SQLException {
-		connection.close();
-
-		System.out.println("The Data base has been closed");
-	}
+//	@AfterSuite(groups = {"smoke", "regression"})
+//	public void asConfig() throws SQLException {
+//		connection.close();
+//
+//		System.out.println("The Data base has been closed");
+//	}
 }

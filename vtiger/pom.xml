@@ -57,6 +57,10 @@
 							<version>3.1.2</version>
 							<configuration>
 								<suiteXmlFiles>SmokeTestng.xml</suiteXmlFiles>
+								<systemPropertyVariables>
+								<browser>${browser}</browser>
+								
+								</systemPropertyVariables>
 							</configuration>
 						</plugin>
 					</plugins>
