@@ -101,6 +101,8 @@ public class BaseClass {
 	@AfterTest(groups = {"smoke", "regression"})
 	public void atConfig() {
 		System.out.println("Close the Parallel Execution");
+		
+		System.out.println("Demo For Jenkins");
 	}
 
 //	@AfterSuite(groups = {"smoke", "regression"})
