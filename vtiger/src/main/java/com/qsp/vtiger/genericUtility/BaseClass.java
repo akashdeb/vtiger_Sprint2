@@ -44,12 +44,12 @@ public class BaseClass {
 		System.out.println("Parallel Execution has been started");
 	}
 	
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass(groups = {"smoke", "regression"})
-	public void bcConfig(String browser) throws IOException {
+	public void bcConfig() throws IOException {
 		
-		System.out.println("The parameter value ==================== "+browser);
-		//String browser = fUtils.fetchDataFromPropertyFile("browser");
+		//System.out.println("The parameter value ==================== "+browser);
+		String browser = fUtils.fetchDataFromPropertyFile("browser");
 		String url = fUtils.fetchDataFromPropertyFile("url");
 
 		if (browser.equals("chrome")) {

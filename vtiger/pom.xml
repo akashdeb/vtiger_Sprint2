@@ -45,7 +45,7 @@
 		</dependency>
 	</dependencies>
 
-	<profiles>
+	<!--  <profiles>
 		<profile>
 			<id>smoke</id>
 			<build>
@@ -85,6 +85,6 @@
 			</build>
 		</profile>
 		
-	</profiles>
+	</profiles> -->
 
 </project>

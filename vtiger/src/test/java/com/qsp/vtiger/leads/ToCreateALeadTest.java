@@ -20,7 +20,7 @@ import com.qsp.vtiger.pomRepository.LeadsPage;
 @Listeners(com.qsp.vtiger.genericUtility.ListenerImplementationClass.class)
 public class ToCreateALeadTest extends BaseClass {
 	
-	@Test(retryAnalyzer = com.qsp.vtiger.genericUtility.RetryImplementationClass.class)
+	@Test(retryAnalyzer = com.qsp.vtiger.genericUtility.RetryImplementationClass.class, groups = "smoke")
 	public void toCreateALeadAndVerifyTheLeadDetailsTest() throws EncryptedDocumentException, IOException, SQLException {
 		//Test Data
 		String leadSalutation = eUtils.fetchStringDataFromExcel(IPathConstant.LEAD_SHEET_NAME, 17, 2);
