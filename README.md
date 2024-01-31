@@ -66,13 +66,15 @@
 <p>
     Test scripts are written using TestNG and are designed to interact with the POM classes, invoking methods to perform actions on the application and validate expected outcomes.
 </p>
-<code>
-    <!-- Sample Test Script for Creating a Lead -->
-    @Test(priority = 1, retryAnalyzer = genericUtility.RetryAnalyzerImplementationClass.class, groups = "smoke")
-    public void toCreateALeadAndToVerifyTheLeadDetails() throws EncryptedDocumentException, FileNotFoundException, IOException, SQLException {
-        // ... (Refer to individual test scripts for details)
-    }
-</code>
+<pre>
+    <code>
+        <!-- Sample Test Script for Creating a Lead -->
+        @Test(priority = 1, retryAnalyzer = genericUtility.RetryAnalyzerImplementationClass.class, groups = "smoke")
+        public void toCreateALeadAndToVerifyTheLeadDetails() throws EncryptedDocumentException, FileNotFoundException, IOException, SQLException {
+            // ... (Refer to individual test scripts for details)
+        }
+    </code>
+</pre>
 
 <!-- 5. Test Data -->
 <h2 id="test-data">5. Test Data</h2>
@@ -104,17 +106,16 @@
 <p>
     The <code>pom.xml</code> file contains Maven project configuration details, dependencies, and build settings. It ensures consistency in the build process and facilitates easy dependency management.
 </p>
-<code>
-    <!-- Example Dependencies -->
-    <!-- Selenium WebDriver -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.16.1</version>
-    </dependency>
-    <!-- TestNG -->
-    <!-- ... (Similar entries for other dependencies) -->
-</code>
+<pre>
+    <code>
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+            &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+            &lt;version&gt;4.16.1&lt;/version&gt;
+        &lt;/dependency&gt;
+    </code>
+</pre>
+
 
 <!-- 10. Conclusion -->
 <h2 id="conclusion">10. Conclusion</h2>
